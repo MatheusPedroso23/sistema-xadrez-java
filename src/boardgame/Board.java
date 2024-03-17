@@ -44,11 +44,13 @@ public class Board {
 	
 	public void PlacePiece(Piece piece, Position position) {
 		if(thereisAPiece(position)) {
-			throw new BoardException("Ja existe uma peca nessa posicao" + position);
+			throw new BoardException("Ja existe uma peca nessa posicao : " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
+		
 	}
+
 	
 	private boolean positionExists(int row, int column) {
 		return row >= 0 && row < rows && column >= 0 && column < colums;
