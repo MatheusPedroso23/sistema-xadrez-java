@@ -47,8 +47,7 @@ public class Board {
 			throw new BoardException("Ja existe uma peca nessa posicao : " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
-		piece.position = position;
-		
+		piece.position = position;	
 	}
 	
 	
