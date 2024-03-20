@@ -48,6 +48,10 @@ public class ChessMatch {
 		if(!board.thereisAPiece(position)) {
 			throw new ChessException("nao tem peca na posicao");
 		}
+		if(!board.piece(position).isThereAnyPossibleMove()) {
+			throw new ChessException("nao tem jogadas possiveis ");
+			
+		}
 	}
 	
 	private void placeNewPiece(char column , int row, ChessPiece piece) {
